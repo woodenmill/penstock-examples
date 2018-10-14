@@ -1,0 +1,3 @@
+CREATE STREAM watched (contentId VARCHAR, eventTimestamp BIGINT, user STRUCT<firstName VARCHAR, lastName VARCHAR, postCode VARCHAR>) WITH (KAFKA_TOPIC='content-watched', VALUE_FORMAT='JSON');
+
+CREATE STREAM anonymized_watched AS SELECT contentId, eventTimestamp, SUBSTRING(user->postCode, 0, 3) AS postCode FROM watched PARTITION BY contentId;
