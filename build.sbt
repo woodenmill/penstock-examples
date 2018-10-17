@@ -6,7 +6,7 @@ scalaVersion := "2.12.7"
 
 resolvers += Resolver.bintrayRepo("woodenmill", "oss-maven")
 
-libraryDependencies += "io.woodenmill" %% "penstock" % "0.0.1" % Test
+libraryDependencies += "io.woodenmill" %% "penstock" % "0.0.2" % Test
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % Test
 libraryDependencies += "org.apache.kafka" % "kafka-clients" % "1.1.1" % Test
