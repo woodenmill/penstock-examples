@@ -2,13 +2,17 @@
 
 ## Running 
 
-* Start Kafka, KSQL server and monitoring stack by running: 
+1. Start Kafka, KSQL server and monitoring stack by running: 
 ```bash
-cd ./docker
-docker-compose up -d --build
+docker-compose -f docker/docker-compose.yml up -d --build
 ```
 
-* Run `PerformanceSpec`:
+1. Run `PerformanceSpec`:
 ```bash
 sbt test
+```
+
+1. Stop containers
+```bash
+docker-compose -f docker/docker-compose.yml down
 ```
